@@ -21,6 +21,7 @@ import { defineComponent } from 'vue'
 import AppCronometro from './AppCronometro.vue';
 export default defineComponent({
     name: 'AppTemporizador',
+    emtis: ['aoTemporizadorFinalizado'],
     components: {
         AppCronometro
     },
@@ -41,9 +42,9 @@ export default defineComponent({
         },
         finalizar() {
             this.cronometroRodando = false
-
             clearInterval(this.cronometro);
-            // this.tempoEmSegundos = 0;
+            this.$emit('aoTemporizadorFinalizado', this.tempoEmSegundos);
+            this.tempoEmSegundos = 0;
         }
     }
 })
