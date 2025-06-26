@@ -1,29 +1,21 @@
 <template>
     <div class="is-flex is-align-items-center is-justufy-content-space-between">
         <AppCronometro :tempoEmSegundos="tempoEmSegundos" />
-        <button class="button" :disabled="cronometroRodando">
-            <span class="icon">
-                <i class="fas fa-play"></i>
-            </span>
-            <span @click="iniciar()">play</span>
-        </button>
-        <button class="button" :disabled="!cronometroRodando">
-            <span class="icon">
-                <i class="fas fa-stop"></i>
-            </span>
-            <span @click="finalizar()">stop</span>
-        </button>
+        <AppButton :clicar="iniciar" :habilitado="cronometroRodando" icon="fas fa-play" funcao="play" />
+        <AppButton :clicar="finalizar" :habilitado="!cronometroRodando" icon="fas fa-stop" funcao="stop" />
+
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import AppCronometro from './AppCronometro.vue';
+import AppButton from './AppButton.vue';
 export default defineComponent({
     name: 'AppTemporizador',
     emtis: ['aoTemporizadorFinalizado'],
     components: {
-        AppCronometro
+        AppCronometro, AppButton
     },
     data() {
         return {
