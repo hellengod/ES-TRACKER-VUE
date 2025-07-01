@@ -5,7 +5,9 @@
     </div>
     <div class="column is-three-quarter">
       <AppFormulario />
-
+      <div class="lista">
+        <AppTarefa/>
+      </div>
     </div>
   </main>
 </template>
