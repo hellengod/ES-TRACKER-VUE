@@ -16,10 +16,15 @@
 import { defineComponent } from 'vue';
 import BarraLateral from './components/BarraLateral.vue';
 import AppFormulario from './components/AppFormulario.vue';
+import AppTarefa from './components/AppTarefa.vue';
 export default defineComponent({
   name: 'App',
-  components: { BarraLateral, AppFormulario }
+  components: { BarraLateral, AppFormulario, AppTarefa },
 });
 </script>
 
-<style></style>
+<style>
+.lista {
+    padding: 1.25rem;
+}
+</style>

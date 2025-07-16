@@ -1,6 +1,6 @@
 <template>
     <section>
-        <strong>{{ tempoDecorrido }}</strong>
+        <strong style="color: black;">{{ tempoDecorrido }}</strong>
     </section>
 </template>
 
@@ -11,7 +11,8 @@ export default defineComponent({
     name: 'AppCronometro',
     props: {
         tempoEmSegundos: {
-            type: Number, default: 0
+            type: Number, 
+            default: 0
         }
     },
     computed: {

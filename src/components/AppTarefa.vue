@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="box has-text-wight-bold">
         <div class="columns">
@@ -7,7 +5,7 @@
                 Descricao da tarefa
             </div>
             <div class="column">
-                <AppCronometro/>
+                <AppCronometro tempoEmSegundos="15" />
             </div>
         </div>
     </div>
@@ -17,7 +15,14 @@
 import { defineComponent } from 'vue';
 import AppCronometro from './AppCronometro.vue';
 export default defineComponent({
-    name: 'AppTarefa', 
-    components: {AppCronometro},
+    name: 'AppTarefa',
+    components: { AppCronometro },
 })
 </script>
+
+<style scoped>
+.box{
+    background: #e9e3d2;
+    color: black;
+}
+</style>
